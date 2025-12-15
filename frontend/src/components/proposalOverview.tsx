@@ -4,6 +4,7 @@ import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 import { getProposalsAPI } from "@/apis/rpf";
+import { formatDateUtil } from "@/utils";
 
 const columns = [
   {
@@ -20,8 +21,7 @@ const columns = [
     field: "createdAt",
     headerName: "Date",
     width: 120,
-    valueFormatter: (params: any) =>
-      new Date(params.value).toLocaleDateString(),
+    valueFormatter: (params: any) => formatDateUtil(params.createdAt),
   },
 ];
 

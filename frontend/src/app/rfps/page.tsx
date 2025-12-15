@@ -5,6 +5,7 @@ import { Button, Box, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import Router from "next/router";
+import { formatDateUtil } from "@/utils";
 
 const columns = [
   { field: "title", headerName: "Title", width: 250 },
@@ -14,8 +15,7 @@ const columns = [
     field: "createdAt",
     headerName: "Created",
     width: 150,
-    valueFormatter: (params: any) =>
-      new Date(params.value).toLocaleDateString(),
+    valueFormatter: (params: any) => formatDateUtil(params.value),
   },
   {
     field: "actions",

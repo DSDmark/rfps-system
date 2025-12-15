@@ -4,6 +4,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { Box, Button, Typography } from "@mui/material";
 import { getRFPsAPI } from "@/apis/rpf";
 import { useRouter } from "next/navigation";
+import { formatDateUtil } from "@/utils";
 
 const columns = (router: any) => [
   { field: "title", headerName: "Title", width: 200 },
@@ -12,7 +13,7 @@ const columns = (router: any) => [
     field: "createdAt",
     headerName: "Created",
     width: 120,
-    valueFormatter: (params: any) => params.value,
+    valueFormatter: (params: any) => formatDateUtil(params.value),
   },
   {
     field: "actions",
