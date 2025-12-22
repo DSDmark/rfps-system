@@ -12,7 +12,7 @@ const columns = [
     headerName: "RFP",
     width: 200,
     renderCell: (params: any) => (
-      <Link href={`/rfps/${params.row.rfp._id}`}>{params.value}</Link>
+      <Link href={`/rfps/${params?.row?.rfp?._id}`}>{params?.value}</Link>
     ),
   },
   { field: "vendorName", headerName: "Vendor", width: 150 },
@@ -32,7 +32,7 @@ export default function ProposalOverview() {
     (async () => {
       const res = await getProposalsAPI();
       if (res.remote === "success") {
-        setProposals(res.data?.data || []);
+        setProposals(res?.data?.data || []);
       }
     })();
   }, []);
