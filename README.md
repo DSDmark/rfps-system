@@ -6,7 +6,6 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/DSDmark/Shoes-webTemplate)
 [![Deploy Jekyll with GitHub Pages dependencies preinstalled](https://github.com/DSDmark/Shoes-webTemplate/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/DSDmark/Shoes-webTemplate/actions/workflows/jekyll-gh-pages.yml)
 
-
 # RFPs SYSTEM 
 
 <div>

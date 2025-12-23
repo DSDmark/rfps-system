@@ -14,20 +14,11 @@ export default function Dashboard() {
   const handleTabChange = (_: any, newValue: number) => {
     setTabValue(newValue);
 
-    //   if (newValue === 0) {
-    //     router.push("/rfps");
-    //   } else if (newValue === 1) {
-    //     router.push("/vendors");
-    //   } else if (newValue === 2) {
-    //     router.push("/proposals");
-    //   }
-  };
-
   const handleCreateClick = () => {
     if (tabValue === 1) {
       router.push("/vendor");
     } else if (tabValue === 2) {
-      router.push("/proposals");
+      router.push("/rfps/new");
     } else {
       router.push("/rfps/new");
     }
